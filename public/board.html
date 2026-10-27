@@ -4,15 +4,14 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>UniEats – Scrum Board (SIT 403 CAT 1)</title>
-    <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="board.css" />
+    <link rel="stylesheet" href="style.css?v=3" />
+    <link rel="stylesheet" href="board.css?v=3" />
   </head>
   <body>
     <header>
-  <h1 class="logo" onclick="go('menu')">Uni<b>Eats</b></h1>
-  <button class="loc-pill" onclick="openLoc()" aria-label="Change delivery location">📍 <span id="locLabel">Set location</span> ▾</button>
-  <a class="board-link" href="index.html">Back</a>
-  <nav id="nav"></nav>
+  <h1 class="logo"><a href="index.html" style="color:inherit;text-decoration:none">Uni<b>Eats</b></a> Scrum Board</h1>
+  <a class="board-link" href="index.html">← Back to app</a>
+  <nav><button onclick="resetBoard()">Reset board</button></nav>
 </header>
     <div class="wrap">
       <p class="muted">
@@ -84,6 +83,6 @@
     </div>
     <div class="modal" id="cardM"><div class="sheet" id="cardSheet"></div></div>
     <button class="theme-fab" onclick="toggleDark()" aria-label="Switch dark or light mode"></button>
-    <script src="board.js"></script>
+    <script src="board.js?v=3"></script>
   </body>
 </html>
