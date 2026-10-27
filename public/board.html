@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>UniEats – Scrum Board (SIT 403 CAT 1)</title>
+<link rel="stylesheet" href="css/style.css"><link rel="stylesheet" href="css/board.css"></head>
+<body>
+<header><h1 class="logo">Uni<b>Eats</b> Scrum Board</h1><nav><a href="index.html">Open the app</a><button onclick="resetBoard()">Reset board</button><button onclick="toggleDark()">🌓</button></nav></header>
+<div class="wrap">
+ <p class="muted">Sprint 1 (1 week) · Drag cards between columns · Click a card to open comments and flag it as blocked · WIP limit on In Progress: 2</p>
+ <div id="warn" class="warn" hidden>⚠ WIP limit exceeded: more than 2 stories are In Progress. Finish or test one before starting another.</div>
+ <div class="board" id="board"></div>
+ <details class="card" open><summary><b>Answers: Tasks 4–6</b></summary>
+  <p><b>Task 4 (i)</b> The stuck card gets a red “BLOCKED” label, a red border and a 🚫 icon (open the card and press “Flag as blocked”); in Trello/Jira use a red “Blocked” label (Jira: “Flag impediment”) and keep it in In Progress so everyone sees it.<br><b>Task 4 (ii)</b> Comment: “Scrum Master, I cannot save items to the cart because the university database server is offline for maintenance, so this story is blocked until it is back.”</p>
+  <p><b>Task 5 (i)</b> In Progress has a WIP limit of 2: its header turns red and the warning banner appears when a third card enters (Trello: Power-Up “List Limits”; Jira: column constraint “Max 2”).<br><b>Task 5 (ii)</b> Moving a card to Done opens the Definition of Done checklist. All three boxes must be ticked or the card is sent back (Trello: checklist on every card / Butler rule; Jira: Done column “Definition of Done” workflow validator).</p>
+  <p><b>Task 6 (i)</b> A Sprint Backlog is a commitment to the Sprint Goal. The Product Owner and the team agree it at planning, so mid-sprint injections break focus, hurt predictability and risk the committed stories. New work goes into the Product Backlog and is ordered for the next Sprint Planning (Sprint 2), unless it is so urgent that the Product Owner negotiates a swap with the Developers.<br><b>Task 6 (ii)</b> See the “Dark Mode UI Theme” card sitting in the Backlog column.</p>
+ </details>
+</div>
+<div class="modal" id="dod"><div class="sheet"><h2 style="margin-top:0">Definition of Done</h2><p class="muted" id="dodTitle"></p>
+ <label><input type="checkbox" class="dc"> Runs in a web browser without crashing</label>
+ <label><input type="checkbox" class="dc"> Tested and approved by another teammate</label>
+ <label><input type="checkbox" class="dc"> Working UI with no broken links</label>
+ <p class="err" id="dodErr"></p><div class="row"><button class="ghost" onclick="dodCancel()">Back to Testing</button><button class="p" onclick="dodOk()">Move to Done</button></div></div></div>
+<div class="modal" id="cardM"><div class="sheet" id="cardSheet"></div></div>
+<script src="js/board.js"></script></body></html>
