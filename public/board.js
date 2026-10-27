@@ -1,3 +1,12 @@
+if (JSON.parse(localStorage.getItem("dark") || "false"))
+  document.body.classList.add("dark");
+function toggleDark() {
+  document.body.classList.toggle("dark");
+  localStorage.setItem(
+    "dark",
+    JSON.stringify(document.body.classList.contains("dark")),
+  );
+}
 const COLS = [
   "Backlog",
   "To Do (This Sprint)",

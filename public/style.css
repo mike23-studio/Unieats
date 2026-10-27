@@ -610,3 +610,54 @@ button.ghost:hover {
     transition: none !important;
   }
 }
+.board-link {
+  margin-left: auto;
+  color: var(--text);
+  text-decoration: none;
+  font: 500 0.9rem Poppins;
+  padding: 8px 14px;
+  border-radius: 99px;
+  background: var(--bg);
+  transition: 0.25s;
+}
+.board-link:hover {
+  background: var(--accent);
+  color: #fff;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 18px rgba(6, 193, 103, 0.35);
+}
+.board-link + nav {
+  margin-left: 0;
+}
+.theme-fab {
+  position: fixed;
+  right: 18px;
+  bottom: 18px;
+  z-index: 40;
+  width: 52px;
+  height: 52px;
+  border: 0;
+  border-radius: 50%;
+  background: var(--text);
+  color: var(--bg);
+  font-size: 1.4rem;
+  cursor: pointer;
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.3);
+  transition:
+    transform 0.5s cubic-bezier(0.2, 1.4, 0.4, 1),
+    background 0.3s;
+}
+.theme-fab::before {
+  content: "🌙";
+}
+body.dark .theme-fab::before {
+  content: "☀️";
+}
+.theme-fab:hover {
+  transform: rotate(25deg) scale(1.12);
+  background: var(--accent);
+  color: #fff;
+}
+.theme-fab:active {
+  transform: rotate(180deg) scale(0.9);
+}

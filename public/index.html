@@ -7,17 +7,12 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <header>
-      <h1 class="logo" onclick="go('menu')">Uni<b>Eats</b></h1>
-      <button
-        class="loc-pill"
-        onclick="openLoc()"
-        aria-label="Change delivery location"
-      >
-        📍 <span id="locLabel">Set location</span> ▾
-      </button>
-      <nav id="nav"></nav>
-    </header>
+   <header>
+  <h1 class="logo" onclick="go('menu')">Uni<b>Eats</b></h1>
+  <button class="loc-pill" onclick="openLoc()" aria-label="Change delivery location">📍 <span id="locLabel">Set location</span> ▾</button>
+  <a class="board-link" href="board.html">📋 Scrum board</a>
+  <nav id="nav"></nav>
+</header>
     <main id="app"></main>
     <div
       class="modal"
@@ -41,6 +36,7 @@
       </div>
     </div>
     <div class="toast" id="toast"></div>
+    <button class="theme-fab" onclick="toggleDark()" aria-label="Switch dark or light mode"></button>
     <script src="app.js"></script>
   </body>
 </html>
